@@ -48,7 +48,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
             android:background="@drawable/standard_buttons"
-            android:onClick="signUpOnClick"
+            android:onClick="testOnClick"
             android:text="Test 1"
             android:textColor="@color/colorText"
 
@@ -67,7 +67,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:background="@drawable/standard_buttons"
-            android:onClick="signInOnClick"
+            android:onClick="testOnClick"
             android:text="Test 2"
             android:textColor="@color/colorText"
 
