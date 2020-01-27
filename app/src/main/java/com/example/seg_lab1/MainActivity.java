@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, QuestionScreenActivity.class);
         startActivity(intent);
     }
+    public void settingsOnClick(View view){
+        Intent intent = new Intent(this,SettingsScreenActivity.class);
+        startActivity(intent);
+    }
 
 
 //Method to return the JSON stored in assets as a String

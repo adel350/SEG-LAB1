@@ -90,7 +90,9 @@
             android:visibility="visible"
             tools:visibility="visible"
             app:layout_constraintRight_toRightOf="@+id/conLayout"
-            app:layout_constraintBottom_toBottomOf="@+id/conLayout"/>
+            app:layout_constraintBottom_toBottomOf="@+id/conLayout"
+            android:onClick="settingsOnClick"
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
