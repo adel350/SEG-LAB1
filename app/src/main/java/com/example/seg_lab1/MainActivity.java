@@ -15,15 +15,22 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import android.util.Log;
 
+
+
 public class MainActivity extends AppCompatActivity {
+
+    //Array list of questions that will be populated here
+    public ArrayList<Question> questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadJSONFromAsset();
-        System.out.println("ADEL HI");
-        System.out.println(loadJSONFromAsset());
+//        loadJSONFromAsset();
+//        System.out.println("ADEL HI");
+//        System.out.println(loadJSONFromAsset());
+
+        questions = new ArrayList<Question>();
         populateData();
 
         //Populate all questions and settings scheme HERE
@@ -55,18 +62,26 @@ public class MainActivity extends AppCompatActivity {
     public void populateData() {
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset());
-            JSONArray m_jArry = obj.getJSONArray("questions");
-            ArrayList<HashMap<String, String>> questionList = new ArrayList<HashMap<String, String>>();
-            HashMap<String, String> m_li;
+            JSONArray questionArray = obj.getJSONArray("questions");
+            JSONArray optionsArray = obj.getJSONArray("choices");
+//            ArrayList<HashMap<String, String>> questionList = new ArrayList<HashMap<String, String>>();
+//            HashMap<String, String> m_li;
 
-            System.out.println("Adel");
-            System.out.println(m_jArry.length());
 
-            for (int i = 0; i < m_jArry.length(); i++) {
-                JSONObject jo_inside = m_jArry.getJSONObject(i);
+
+            for (int i = 0; i < questionArray.length(); i++) {
+                JSONObject jo_inside = questionArray.getJSONObject(i);
                 //Log.d("Details-->", jo_inside.getString("formule"));
-                int formula_value = jo_inside.getInt("id");
-                String url_value = jo_inside.getString("title");
+                int question_id = jo_inside.getInt("id");
+                String title = jo_inside.getString("title");
+                int correctAnswerId = jo_inside.getInt("correctAnswerId");
+
+                Question newQuestion = new Question(question_id, title, correctAnswerId);
+                questions.add(newQuestion);
+
+
+                //For each question, add the corresponding options
+
 
 //                //Add your values in your `ArrayList` as below:
 //                m_li = new HashMap<String, String>();
@@ -74,6 +89,21 @@ public class MainActivity extends AppCompatActivity {
 //                m_li.put("url", url_value);
 //
 //                formList.add(m_li);
+            }
+
+            //Add the options now for each question
+            for (int j=0; j < optionsArray.length(); j++) {
+                JSONObject jo_option_inside = questionArray.getJSONObject(j);
+
+                String option1 = jo_option_inside.getString("option1");
+                String option2 = jo_option_inside.getString("option2");
+                String option3 = jo_option_inside.getString("option3");
+                String option4 = jo_option_inside.getString("option4");
+
+                questions.get(j).addOption(option1);
+                questions.get(j).addOption(option2);
+                questions.get(j).addOption(option3);
+                questions.get(j).addOption(option4);
             }
         } catch (JSONException e) {
             e.printStackTrace();

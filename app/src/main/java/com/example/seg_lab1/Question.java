@@ -5,20 +5,20 @@ import java.util.ArrayList;
 public class Question {
 
     private int id;
-    private String description;
+    private String title;
     private ArrayList <String> options;
     private int correctAnswerId;
 
-    public Question(int id, String description, int correctAnswerId) {
+    public Question(int id, String title, int correctAnswerId) {
         this.id = id;
-        this.description = description;
+        this.title = title;
         this.correctAnswerId = correctAnswerId;
         this.options = new ArrayList<String>();//Empty, options need to be added later
     }
 
     public int getId() { return this.id;}
 
-    public String getDescription() {return this.description;}
+    public String getDescription() {return this.title;}
 
     public int getCorrectAnswerId() { return correctAnswerId;}
 
