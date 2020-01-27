@@ -1,18 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="600dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/main_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="Welcome"
+        android:src="@drawable/app_banner" />
+
+
+
     <TextView
+        android:id="@+id/text_welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="64dp"
+        android:gravity="center"
+        android:text="Choose the test you want to practice from the list below"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintBottom_toTopOf="@+id/text_welcome_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/test1"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/standard_buttons"
+            android:onClick="signUpOnClick"
+            android:text="Test 1"
+            android:textColor="@color/colorText"
+
+            app:layout_constraintTop_toBottomOf="@+id/text_welcome_message"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NotSibling"
+            />
+
+        <Button
+            android:id="@+id/test2"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/standard_buttons"
+            android:onClick="signInOnClick"
+            android:text="Test 2"
+            android:textColor="@color/colorText"
+
+            app:layout_constraintTop_toBottomOf="@+id/test1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="NotSibling"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/settings_but"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Welcome"
+            android:src="@drawable/settings_button"
+            android:visibility="visible"
+            tools:visibility="visible"
+            app:layout_constraintRight_toRightOf="@+id/conLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/conLayout"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>
+
