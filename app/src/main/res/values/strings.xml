@@ -3,4 +3,7 @@
     <string name="Test1_Button">Test Two</string>
     <string name="Test_Button1">Test One</string>
     <string name="settingsButton">Settings</string>
+    <string name="imagedescription">backgroundimage</string>
+    <string name="text_to_begin">SELect Test to begin</string>
+    <string name="welcomeString">WELCOME</string>
 </resources>
