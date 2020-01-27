@@ -1,0 +1,126 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "1) 491 ÷ 9 =",
+      "correctAnswerId": 1
+    },
+    {
+      "id": 2,
+      "title": "2) 703 ÷ 6 =",
+      "correctAnswerId":2
+    },
+    {
+      "id": 3,
+      "title": "3) Express 71/1000 as a decimal.",
+      "correctAnswerId":3
+    },
+    {
+      "id": 4,
+      "title": "4) 4.7 + .9 + .01 =",
+      "correctAnswerId":3
+    },
+    {
+      "id": 5,
+      "title": "5) .33 × .59 =",
+      "correctAnswerId":1
+    },
+    {
+      "id": 6,
+      "title": "6) .84 ÷ .7 =",
+      "correctAnswerId":4
+    },
+    {
+      "id": 7,
+      "title": "7) Express the ten thousandths place in 1.7389",
+      "correctAnswerId":3
+    },
+    {
+      "id": 8,
+      "title": "8) .87 – .48 =",
+      "correctAnswerId":1
+    },
+    {
+      "id": 9,
+      "title": "9) Round 3.864 to the nearest tenth.",
+      "correctAnswerId":1
+    },
+    {
+      "id": 10,
+      "title": "10) Which is the equivalent decimal number for forty nine thousandths?",
+      "correctAnswerId":3
+    }
+  ],
+  "choices": [
+    {
+      "id": 1,
+      "option1": "A) 54 r5",
+      "option2": "B) 56 r6",
+      "option3": "C) 57 r5",
+      "option4": "D) 51 r3"
+    },
+    {
+      "id": 2,
+      "option1": "A) 116 r5",
+      "option2": "B) 117 r1",
+      "option3": "C) 116 r3",
+      "option4": "D) 118 r4"
+    },
+    {
+      "id": 3,
+      "option1": "A) .71",
+      "option2": "B) .0071",
+      "option3": "C) .071",
+      "option4": "D) 7.1"
+    },
+    {
+      "id": 4,
+      "option1": "A) 5.5",
+      "option2": "B) 6.51",
+      "option3": "C) 5.61",
+      "option4": "D) 5.7"
+    },
+    {
+      "id": 5,
+      "option1": "A) .1947",
+      "option2": "B) 1.947",
+      "option3": "C) .0197",
+      "option4": "D) .1817"
+    },
+    {
+      "id": 6,
+      "option1": "A) .12",
+      "option2": "B) 12",
+      "option3": "C) .012",
+      "option4": "D) 1.2"
+    },
+    {
+      "id": 7,
+      "option1": "A) 1",
+      "option2": "B) 8",
+      "option3": "C) 9",
+      "option4": "D) 3"
+    },
+    {
+      "id": 8,
+      "option1": "A) .39",
+      "option2": "B) .49",
+      "option3": "C) .41",
+      "option4": "D) .37"
+    },
+    {
+      "id": 9,
+      "option1": "A) 3.9",
+      "option2": "B) 3.86",
+      "option3": "C) 4",
+      "option4": "D) 3.96"
+    },
+    {
+      "id": 10,
+      "option1": "A) .49",
+      "option2": "B) .0049",
+      "option3": "C) .049",
+      "option4": "D) 4.9"
+    }
+  ]
+}
