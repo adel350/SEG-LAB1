@@ -4,4 +4,32 @@
     <string name="passingGrade">Passing Grade</string>
     <string name="cancelSettings">Cancel</string>
     <string name="saveSettings">Save</string>
+    <string name="questions_prompt">Select Number of Questions</string>
+
+    <string-array name="questions_arrays">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="passingGrade_arrays">
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+        <item>80</item>
+        <item>85</item>
+        <item>90</item>
+        <item>95</item>
+            </string-array>
+
 </resources>

@@ -28,7 +28,13 @@
             android:id="@+id/questionspinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="64dp" />
+            android:layout_marginBottom="64dp"
+            android:entries="@array/questions_arrays"
+            android:prompt="@string/questions_prompt"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/textView3"
@@ -44,6 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="64dp"
+            android:entries="@array/passingGrade_arrays"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
             />
     </LinearLayout>
 
