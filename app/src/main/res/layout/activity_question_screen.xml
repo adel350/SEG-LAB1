@@ -21,6 +21,7 @@
 
 
             <TextView
+                android:id="@+id/question_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -45,7 +46,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@android:dimen/notification_large_icon_height"
-                android:onClick="checkSortBySelection"
                 android:text="a- bla bla"
                 android:textSize="16sp" />
 
@@ -54,7 +54,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@android:dimen/notification_large_icon_height"
-                android:onClick="checkSortBySelection"
                 android:text="b- bla bla"
                 android:textSize="16sp" />
 
@@ -62,7 +61,6 @@
                 android:id="@+id/rbutton_option3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="checkSortBySelection"
                 android:text="c- bla bla"
                 android:textSize="16sp" />
 
@@ -70,7 +68,6 @@
                 android:id="@+id/rbutton_option4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="checkSortBySelection"
                 android:text="d- bla bla"
                 android:textSize="16sp" />
 
@@ -88,7 +85,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/standard_buttons"
         android:gravity="center|center_horizontal|center_vertical"
-        android:onClick="getSearchResults"
+        android:onClick="submitOnClick"
         android:text="Submit"
         android:textColor="@color/colorText"
         app:layout_constraintHorizontal_bias="0.5"
