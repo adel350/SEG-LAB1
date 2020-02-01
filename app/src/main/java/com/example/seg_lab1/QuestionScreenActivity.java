@@ -63,6 +63,8 @@ public class QuestionScreenActivity extends AppCompatActivity {
 
         questionNumber++;
 
+
+
 //        Intent intent = new Intent(this, QuestionScreenActivity.class);
 //        intent.putExtra("questionsList", questions); //passing the questions array to the next activity
 //        startActivity(intent);
