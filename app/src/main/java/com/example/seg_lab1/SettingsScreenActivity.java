@@ -2,6 +2,7 @@ package com.example.seg_lab1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -60,9 +61,8 @@ public class SettingsScreenActivity extends AppCompatActivity {
         Settings.changePassingGrade(Integer.parseInt(grade));
         Settings.changeNumberOfQuestions(Integer.parseInt(question));
 
-        System.out.println("ADEL2");
-        System.out.println(Settings.passingGrade);
-        System.out.println(Settings.numberOfQuestions);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
 
     }
 

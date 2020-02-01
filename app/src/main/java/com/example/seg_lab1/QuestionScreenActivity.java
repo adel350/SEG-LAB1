@@ -107,7 +107,7 @@ public class QuestionScreenActivity extends AppCompatActivity {
 
     public void goToSummaryScreen(View view) {
         Intent intent = new Intent(this, SummaryScreenActivity.class);
-        //intent.putExtra("questionsList", questions); //passing the questions array to the next activity
+        intent.putExtra("correctQuestions", numOfQuestionsAnsweredRight); //passing the questions array to the next activity
         startActivity(intent);
     }
 }
