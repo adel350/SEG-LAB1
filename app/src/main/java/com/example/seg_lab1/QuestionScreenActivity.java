@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import org.w3c.dom.Text;
+
 
 public class QuestionScreenActivity extends AppCompatActivity {
 
@@ -54,40 +56,50 @@ public class QuestionScreenActivity extends AppCompatActivity {
     }
 
     public void submitOnClick(View view) {
-        //Check if correct answer
-        int radioButtonId = optionsRadioGroup.getCheckedRadioButtonId();
-        optionRadioButton = findViewById(radioButtonId);
-        int selectedIndex = optionsRadioGroup.indexOfChild(optionRadioButton);
 
-        if ((selectedIndex+1) == questions.get(questionNumber-1).getCorrectAnswerId())
-            numOfQuestionsAnsweredRight++;
-
-
-
-
-        //Check if we should display the results or not
-        if (questionNumber == Settings.numberOfQuestions)
-            goToSummaryScreen(findViewById(android.R.id.content).getRootView());
+        //Check if an answer is selected first, if not then display an error message
+        TextView errorMessage = (TextView) findViewById(R.id.text_error_message);
+        if (optionsRadioGroup.getCheckedRadioButtonId() == -1)
+            errorMessage.setVisibility(View.VISIBLE);
         else {
-            //Display next question or results
+            errorMessage.setVisibility(View.INVISIBLE);
+            //Check if correct answer
+            int radioButtonId = optionsRadioGroup.getCheckedRadioButtonId();
+            optionRadioButton = findViewById(radioButtonId);
+            int selectedIndex = optionsRadioGroup.indexOfChild(optionRadioButton);
 
-            //Populating the texts
-            TextView questionDescription = (TextView) findViewById(R.id.question_description);
-            TextView option1 = (TextView) findViewById(R.id.rbutton_option1);
-            TextView option2 = (TextView) findViewById(R.id.rbutton_option2);
-            TextView option3 = (TextView) findViewById(R.id.rbutton_option3);
-            TextView option4 = (TextView) findViewById(R.id.rbutton_option4);
+            if ((selectedIndex+1) == questions.get(questionNumber-1).getCorrectAnswerId())
+                numOfQuestionsAnsweredRight++;
 
-            questionDescription.setText(questions.get(questionNumber).getDescription());
-            option1.setText(questions.get(questionNumber).getOptions().get(0));
-            option2.setText(questions.get(questionNumber).getOptions().get(1));
-            option3.setText(questions.get(questionNumber).getOptions().get(2));
-            option4.setText(questions.get(questionNumber).getOptions().get(3));
 
-            questionNumber++;
 
-            optionsRadioGroup.clearCheck();
+
+            //Check if we should display the results or not
+            if (questionNumber == Settings.numberOfQuestions)
+                goToSummaryScreen(findViewById(android.R.id.content).getRootView());
+            else {
+                //Display next question or results
+
+                //Populating the texts
+                TextView questionDescription = (TextView) findViewById(R.id.question_description);
+                TextView option1 = (TextView) findViewById(R.id.rbutton_option1);
+                TextView option2 = (TextView) findViewById(R.id.rbutton_option2);
+                TextView option3 = (TextView) findViewById(R.id.rbutton_option3);
+                TextView option4 = (TextView) findViewById(R.id.rbutton_option4);
+
+                questionDescription.setText(questions.get(questionNumber).getDescription());
+                option1.setText(questions.get(questionNumber).getOptions().get(0));
+                option2.setText(questions.get(questionNumber).getOptions().get(1));
+                option3.setText(questions.get(questionNumber).getOptions().get(2));
+                option4.setText(questions.get(questionNumber).getOptions().get(3));
+
+                questionNumber++;
+
+                optionsRadioGroup.clearCheck();
+            }
+
         }
+
 
 
 
