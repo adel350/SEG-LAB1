@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void testOnClick(View view) {
         Intent intent = new Intent(this, QuestionScreenActivity.class);
+        intent.putExtra("questionsList", questions); //passing the questions array to the next activity
         startActivity(intent);
     }
     public void settingsOnClick(View view){
@@ -95,22 +96,28 @@ public class MainActivity extends AppCompatActivity {
 //                formList.add(m_li);
             }
 
+
+
             //Add the options now for each question
             for (int j=0; j < optionsArray.length(); j++) {
-                JSONObject jo_option_inside = questionArray.getJSONObject(j);
+                JSONObject jo_option_inside = optionsArray.getJSONObject(j);
 
                 String option1 = jo_option_inside.getString("option1");
                 String option2 = jo_option_inside.getString("option2");
                 String option3 = jo_option_inside.getString("option3");
                 String option4 = jo_option_inside.getString("option4");
 
+
                 questions.get(j).addOption(option1);
                 questions.get(j).addOption(option2);
                 questions.get(j).addOption(option3);
                 questions.get(j).addOption(option4);
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        System.out.println("ADEL");
+
     }
 }
