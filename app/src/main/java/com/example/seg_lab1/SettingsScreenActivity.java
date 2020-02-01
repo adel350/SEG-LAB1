@@ -34,6 +34,8 @@ public class SettingsScreenActivity extends AppCompatActivity {
 
 
         //TODO: set the intial values for the ones in the Settings
+        questionSpinner.setSelection(getIndexForCorrespondingnumQuestions(Settings.numberOfQuestions));
+        gradeSpinner.setSelection(getIndexForCorrespondingGrade(Settings.passingGrade));
 
 
 //        spinner_adapter = ArrayAdapter.createFromResource(this, R.array.countries, android.R.layout.simple_spinner_item);
@@ -43,8 +45,8 @@ public class SettingsScreenActivity extends AppCompatActivity {
     }
 
     public void cancelOnClick(View view) {
-        questionSpinner.setSelection(0);
-        gradeSpinner.setSelection(0);
+        questionSpinner.setSelection(getIndexForCorrespondingnumQuestions(Settings.numberOfQuestions));
+        gradeSpinner.setSelection(getIndexForCorrespondingGrade(Settings.passingGrade));
 
 //        int default_position = spinner_adapter.getPosition(selectedCountry);
 //        spinner.setSelection(default_position);
@@ -63,5 +65,13 @@ public class SettingsScreenActivity extends AppCompatActivity {
         System.out.println(Settings.passingGrade);
         System.out.println(Settings.numberOfQuestions);
 
+    }
+
+    private int getIndexForCorrespondingGrade(int grade) {
+        return (grade-50)/5;
+    }
+
+    private int getIndexForCorrespondingnumQuestions(int quest) {
+        return quest - 1;
     }
 }
