@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("questionsList", questions); //passing the questions array to the next activity
         startActivity(intent);
     }
+    public void test2OnClick(View view){
+        Intent intent = new Intent(this, QuestionScreenActivity.class);
+        intent.putExtra("questionsList", questions); //passing the questions array to the next activity
+        startActivity(intent);
+    }
     public void settingsOnClick(View view){
         Intent intent = new Intent(this,SettingsScreenActivity.class);
         startActivity(intent);

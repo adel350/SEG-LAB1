@@ -47,9 +47,6 @@ public class SettingsScreenActivity extends AppCompatActivity {
     public void cancelOnClick(View view) {
         questionSpinner.setSelection(getIndexForCorrespondingnumQuestions(Settings.numberOfQuestions));
         gradeSpinner.setSelection(getIndexForCorrespondingGrade(Settings.passingGrade));
-
-//        int default_position = spinner_adapter.getPosition(selectedCountry);
-//        spinner.setSelection(default_position);
     }
 
     public void saveOnClick(View view) {
