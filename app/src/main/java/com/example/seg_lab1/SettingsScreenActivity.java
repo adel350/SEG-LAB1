@@ -33,7 +33,6 @@ public class SettingsScreenActivity extends AppCompatActivity {
         gradeSpinner.setAdapter(grade_spinner_adapter);
 
 
-        //TODO: set the intial values for the ones in the Settings
         questionSpinner.setSelection(getIndexForCorrespondingnumQuestions(Settings.numberOfQuestions));
         gradeSpinner.setSelection(getIndexForCorrespondingGrade(Settings.passingGrade));
 
